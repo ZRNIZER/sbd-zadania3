@@ -1,0 +1,8 @@
+1.SELECT MIN(price) FROM products;
+2.SELECT MAX(price) FROM products;
+3.SELECT SUM(price) FROM products;
+4.SELECT COUNT(*) FROM customers;
+5.SELECT COUNT(*) FROM customers GROUP BY country;
+6.SELECT SUM(price) FROM products WHERE category_id="1";
+7.SELECT SUM(price) FROM products WHERE category_id="2";
+8.SELECT MAX(price) FROM products WHERE category_id="1" OR category_id="2";

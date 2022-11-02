@@ -1,0 +1,8 @@
+1.SELECT * FROM `customers` WHERE country="Germany"
+2.SELECT * FROM `customers` WHERE city="Berlin"
+3.SELECT * FROM `customers` WHERE city="Berlin" OR country="Germany"
+4.SELECT * FROM `customers` WHERE city="Berlin" OR city="München" AND country="Germany"
+5.SELECT * FROM `customers` WHERE NOT country="Germany" AND NOT country="USA"
+6.SELECT * FROM `customers` ORDER BY country ASC
+7.SELECT * FROM `customers` ORDER BY country DSC
+8.SELECT * FROM `customers` ORDER BY country DESC, customer_name ASC
