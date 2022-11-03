@@ -1,0 +1,4 @@
+1.SELECT customer_name , o.id FROM customers C LEFT JOIN orders o ON o.customer_id =c.id;
+2.SELECT o.customer_id , COUNT(o.id) FROM customers C LEFT JOIN orders o ON o.customer_id =c.id;
+3.SELECT o.customer_id , o.id FROM customers C INNER JOIN orders o ON o.customer_id =c.id;
+4.SELECT customer_name , o.id FROM customers C RIGHT JOIN orders o ON o.customer_id =c.id;
