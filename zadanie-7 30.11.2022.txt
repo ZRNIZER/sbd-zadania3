@@ -1,0 +1,4 @@
+1.SELECT p.name FROM products AS p JOIN orders_details AS o ON p.id = o.product_id WHERE o.id = ANY(SELECT o.id FROM orders_details AS o WHERE o.quantity = 10);
+2.SELECT p.name FROM products AS p JOIN orders_details AS o ON p.id = o.product_id WHERE o.id = ANY(SELECT o.id FROM orders_details as o WHERE o.quantity > 99);
+3.SELECT * FROM products AS p WHERE p.id = ALL(SELECT p.id FROM products AS p WHERE p.name);
+4.SELECT p.name FROM products AS p JOIN orders_details AS o ON p.id = o.product_id WHERE o.id = ALL(SELECT o.id FROM orders_details AS o WHERE o.quantity = 10);
