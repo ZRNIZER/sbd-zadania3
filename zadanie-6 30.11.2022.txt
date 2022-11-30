@@ -1,0 +1,5 @@
+1.SELECT COUNT(id), country FROM customers GROUP BY country HAVING COUNT(id) > 5;
+2.SELECT c.customer_name, COUNT(c.id) FROM customers AS c JOIN orders AS o ON o.customer_id = c.id GROUP By c.id HAVING COUNT(c.id) > 2 and COUNT(c.id) < 4;
+3.SELECT e.first_name, e.last_name, COUNT(o.id) FROM employees AS e JOIN orders as o ON o.employee_id = e.id GROUP By e.id HAVING COUNT(o.id) > 10;
+4.SELECT e.last_name, EXISTS(SELECT COUNT(o.id) FROM orders AS o WHERE o.employee_id = e.id HAVING COUNT(o.id)) FROM employees as e WHERE e.last_name="Davolio" OR e.last_name="Fuller";
+5.SELECT id, name, contact_name, address, city, post_code, country, phone FROM suppliers AS s WHERE EXISTS( SELECT p.id FROM products AS p WHERE p.price < 20 AND p.supplier_id = s.id );
