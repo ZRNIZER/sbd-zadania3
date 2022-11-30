@@ -1,0 +1,2 @@
+1.SELECT o.id, o.quantity, CASE WHEN o.quantity > 30 THEN 'sztuk jest wiecej niz 30' WHEN o.quantity < 30 THEN 'sztuk jest mniej niz 30' ELSE 'jest rowna 30' END AS ilosc FROM orders_details AS o;
+2.SELECT c.customer_name, c.city, c.country FROM customers AS c ORDER BY CASE WHEN c.city = NULL THEN c.country ELSE c.city END;
